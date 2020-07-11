@@ -1,0 +1,30 @@
+<%- include("../partials/header.ejs") %>
+
+<div class="container">
+    <br>
+        <header class="jumbotron" style="padding: 10px;">
+            <center><h2>welcome to Images page <%= curuser.username %></h2></center>
+        </header>
+
+    <div class="row" style="display: flex; flex-wrap: wrap;">
+        <% campground.forEach(function(it){ %>
+            <div class="col-md-3 col-sm-6" style="border-style: solid; border-color: black;margin: 10px auto;">
+                    <div >
+                        <img src="<%= it.image %>" width="250px" height="300px">
+                        <div class="caption">
+                            <h2><%= it.name %></h2>
+                        </div>
+                    </div>
+                    <p>
+                        <a class="btn btn-primary" href="/campground/<%= it._id %>">more info</a>
+                    </p>
+            </div>
+         <% }); %>
+    </div>
+     <form action="/campground/new" method="GET">
+        <button type="submit" class="btn btn-danger" >click for upload image</button>
+     </form>
+</div>
+
+
+ <%- include("../partials/footer.ejs") %>

@@ -1,0 +1,20 @@
+<%- include("partials/header.ejs") %>
+<div class="container" style="margin: 50px auto;">
+    <div class="jumbotron" style="margin: 25px auto; width: 50%;">
+        <h1>Login page</h1>
+
+        <div class="form-group">
+            <form action="/login" method="POST">
+                <input type="text" name="username" placeholder="username" style="width: 100%;">
+                <hr>
+                <input type="password" name="password" placeholder="password" style="width: 100%;">
+                <hr>
+                <button class="btn btn-primary btn-lg" type="submit" style="width: 100%;">submit</button>
+            </form>
+       </div>
+   </div>
+</div>
+
+
+
+<%- include("partials/footer.ejs") %>
